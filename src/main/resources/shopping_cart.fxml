@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ethanhann.ui.shopping_cart.ShoppingCartController">
+   <bottom>
+       <GridPane hgap="20.0" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+         <Label fx:id="priceLabel" text="Price: $" GridPane.halignment="CENTER">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+            <Label fx:id="quantityLabel" text="Quantity: " GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+         <Label fx:id="totalLabel" text="Total: " GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+       </GridPane>
+   </bottom>
+   <center>
+      <ListView fx:id="productsListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="Sort">
+               <Menu mnemonicParsing="false" text="By Price">
+                   <MenuItem fx:id="sortByPriceAscending" mnemonicParsing="false" onAction="#sortByPriceAscending"
+                             text="Ascending"/>
+                   <MenuItem fx:id="sortByPriceDescending" mnemonicParsing="false" onAction="#sortByPriceDescending"
+                             text="Descending"/>
+               </Menu>
+               <Menu mnemonicParsing="false" text="By Quantity">
+                   <MenuItem fx:id="sortByQuantityAscending" mnemonicParsing="false" onAction="#sortByQuantityAscending"
+                             text="Ascending"/>
+                   <MenuItem fx:id="sortByQuantityDescending" mnemonicParsing="false" onAction="#sortByQuantityDescending"
+                             text="Descending"/>
+               </Menu>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Remove">
+               <MenuItem mnemonicParsing="false" onAction="#removeItem" text="Remove One" />
+            <MenuItem mnemonicParsing="false" onAction="#removeAll" text="Remove All" />
+            <MenuItem mnemonicParsing="false" onAction="#clearCart" text="Clear Cart" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Checkout" >
+               <MenuItem mnemonicParsing="false" onAction="#checkOut" text="Place Order"/>
+           </Menu>
+       </MenuBar>
+   </top>
+</BorderPane>

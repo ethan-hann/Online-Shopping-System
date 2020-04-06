@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0"
+            prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ethanhann.ui.login.LoginController">
+   <Label layoutX="28.0" layoutY="14.0"
+          text="Welcome!&#10;Please enter username and password to access account.&#10;If you are a new user, select sign up below."
+          textAlignment="CENTER" AnchorPane.topAnchor="14.0">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="usernameInputText" layoutX="28.0" layoutY="109.0" prefHeight="30.0" prefWidth="345.0"
+              promptText="Username" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="27.0">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </TextField>
+   <PasswordField fx:id="passwordInputText" layoutX="28.0" layoutY="159.0" prefHeight="30.0" prefWidth="345.0"
+                  promptText="Password" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="27.0">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </PasswordField>
+   <Button fx:id="loginButton" defaultButton="true" layoutX="28.0" layoutY="200.0" mnemonicParsing="false"
+           onAction="#login" prefHeight="30.0" prefWidth="166.0" text="Log In" AnchorPane.bottomAnchor="29.0"
+           AnchorPane.leftAnchor="28.0">
+      <font>
+         <Font size="14.0"/>
+      </font>
+      <effect>
+         <DropShadow blurType="ONE_PASS_BOX" spread="0.05"/>
+      </effect>
+   </Button>
+   <Button fx:id="signUpButton" layoutX="207.0" layoutY="200.0" mnemonicParsing="false" onAction="#signUp"
+           prefHeight="30.0" prefWidth="166.0" text="Sign Up" AnchorPane.bottomAnchor="29.0"
+           AnchorPane.rightAnchor="27.0">
+      <font>
+         <Font size="14.0"/>
+      </font>
+      <effect>
+         <DropShadow blurType="ONE_PASS_BOX" spread="0.05"/>
+      </effect>
+   </Button>
+   <Label fx:id="errorLabel" layoutX="28.0" layoutY="74.0" prefHeight="30.0" prefWidth="345.0" textFill="RED"
+          underline="true"/>
+</AnchorPane>

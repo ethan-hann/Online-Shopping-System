@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="gridPane" alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ethanhann.ui.account.AccountController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="User ID" />
+    <Label fx:id="userIDLabel" text="null" GridPane.columnIndex="1">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </GridPane.margin></Label>
+    <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#changePassword" prefHeight="25.0" prefWidth="479.0" text="Change Password" GridPane.columnSpan="2" GridPane.rowIndex="2">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </GridPane.margin></Button>
+    <Label text="Billing Address" GridPane.rowIndex="3" />
+    <Label text="Account Opened" GridPane.rowIndex="4" />
+    <Label fx:id="accountOpenedLabel" text="null" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </GridPane.margin></Label>
+    <Label text="Account Closed" GridPane.rowIndex="5" />
+    <Label fx:id="accountClosedLabel" text="null" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </GridPane.margin></Label>
+   <Label text="Email" GridPane.rowIndex="1" />
+   <TextField fx:id="emailTextField" text="null" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </GridPane.margin></TextField>
+    <VBox prefHeight="192.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.rowSpan="2">
+        <TextArea fx:id="billingAddressTextArea" prefHeight="115.0" prefWidth="225.0" text="address" VBox.vgrow="NEVER">
+          <VBox.margin>
+              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+          </VBox.margin>
+        </TextArea>
+    </VBox>
+    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+        <Button fx:id="updateAccountButton" mnemonicParsing="false" onAction="#updateAccount" prefHeight="25.0"
+                prefWidth="219.0" text="Update Account">
+          <HBox.margin>
+              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+          </HBox.margin>
+        </Button>
+        <Button fx:id="closeAccountButton" mnemonicParsing="false" onAction="#closeAccount" prefHeight="25.0"
+                prefWidth="221.0" text="Close Account">
+          <HBox.margin>
+              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+          </HBox.margin>
+        </Button>
+    </HBox>
+</GridPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.27591973244147155" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ethanhann.ui.orders.OrdersController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <ListView fx:id="ordersListView" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <Label layoutX="14.0" layoutY="14.0" text="Order Number:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="orderNumberText" layoutX="104.0" layoutY="14.0" text="Number" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="20.0">
+            <font>
+              <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="15.0" layoutY="59.0" text="Ordered Date: " AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="60.0" />
+        <Label fx:id="orderedDateText" layoutX="104.0" layoutY="59.0" text="Date" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="60.0">
+            <font>
+              <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="105.0" text="Shipping Date:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="100.0" />
+        <Label fx:id="shippedDateText" layoutX="104.0" layoutY="105.0" text="Date" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <font>
+              <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="146.0" text="Order Status:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="140.0" />
+        <Label fx:id="orderStatusText" layoutX="105.0" layoutY="146.0" text="Status" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="140.0">
+            <font>
+              <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="15.0" layoutY="180.0" text="Total:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="180.0" />
+        <Label fx:id="orderTotalText" layoutX="105.0" layoutY="180.0" text="Total" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="180.0">
+            <font>
+              <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+      <Button fx:id="cancelOrderButton" layoutX="98.0" layoutY="216.0" mnemonicParsing="false" onAction="#cancelOrder" text="Cancel Order" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="210.0" />
+        <ScrollPane layoutX="115.0" layoutY="235.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="240.0">
+            <GridPane fx:id="productsGridPane" alignment="CENTER" hgap="5.0" prefHeight="100.0" prefWidth="420.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="33" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints percentWidth="33" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints percentWidth="33" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <Label text="Product Name" GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="System Bold" />
+                    </font>
+                </Label>
+                <Label text="Quantity" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="System Bold" />
+                    </font>
+                </Label>
+                <Label text="Subtotal" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="System Bold" />
+                    </font>
+                </Label>
+            </GridPane>
+        </ScrollPane>
+    </AnchorPane>
+</SplitPane>

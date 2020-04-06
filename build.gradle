@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.beryx.jlink' version '2.17.3'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = "$moduleName/com.ethanhann.ui.login.LoginView"
+sourceCompatibility = 13
+
+dependencies {
+    implementation 'io.github.willena:sqlite-jdbc:3.31.1'
+}
+
+jar {
+    enabled = true
+}
+
+jlink {
+    addOptions('--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages')
+    launcher {
+        name = 'Online-Shopping-System'
+    }
+}
